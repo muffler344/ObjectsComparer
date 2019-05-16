@@ -439,7 +439,7 @@ public class Error
 {
     public int Id { get; set; }
 
-    public string Messgae { get; set; }
+    public string Message { get; set; }
 }
 ```
 ```csharp
@@ -478,7 +478,7 @@ _comparer.AddComparerOverride<DateTime>(DoNotCompareValueComparer.Instance);
 //Do not compare Id
 _comparer.AddComparerOverride(() => new Message().Id, DoNotCompareValueComparer.Instance);
 //Do not compare Message Text
-_comparer.AddComparerOverride(() => new Error().Messgae, DoNotCompareValueComparer.Instance);
+_comparer.AddComparerOverride(() => new Error().Message, DoNotCompareValueComparer.Instance);
 ```
 
 ```csharp
